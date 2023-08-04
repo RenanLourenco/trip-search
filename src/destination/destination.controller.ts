@@ -35,7 +35,8 @@ export class DestinationController {
         return destinations.map( (destination) => new ListDestinationDTO(
             destination.id,
             destination.price,
-            destination.name
+            destination.name,
+            destination.photo
         ))
     }
 
