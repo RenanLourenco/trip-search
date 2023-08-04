@@ -1,11 +1,11 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { DestinationController } from './destination.controller';
+import { DestinationController } from '../src/destination/destination.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { DestinationEntity } from './destination.entity';
-import { PostgresConfigService } from '../config/postgres.config.service';
+import { DestinationEntity } from '../src/destination/destination.entity';
+import { PostgresConfigService } from '../src/config/postgres.config.service';
 import { ConfigModule } from '@nestjs/config';
-import { DestinationService } from './destination.service';
-import { ListDestinationDTO } from './DTO/ListDestination.dto';
+import { DestinationService } from '../src/destination/destination.service';
+import { ListDestinationDTO } from '../src/destination/DTO/ListDestination.dto';
 import { NotFoundException } from '@nestjs/common';
 import { DepoimentEntity } from 'src/depoiments/depoiment.entity';
 

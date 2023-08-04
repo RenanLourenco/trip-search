@@ -1,12 +1,12 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { DepoimentsController } from './depoiments.controller';
-import { DepoimentsService } from './depoiments.service';
+import { DepoimentsController } from '../src/depoiments/depoiments.controller';
+import { DepoimentsService } from '../src/depoiments/depoiments.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { DepoimentEntity } from './depoiment.entity';
+import { DepoimentEntity } from '../src/depoiments/depoiment.entity';
 
-import { PostgresConfigService } from '../config/postgres.config.service';
+import { PostgresConfigService } from '../src/config/postgres.config.service';
 import { ConfigModule } from '@nestjs/config';
-import { ListHomeDepoimentsDTO } from './DTO/ListHomeDepoiments.dto';
+import { ListHomeDepoimentsDTO } from '../src/depoiments/DTO/ListHomeDepoiments.dto';
 
 
 

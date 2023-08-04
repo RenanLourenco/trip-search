@@ -1,10 +1,10 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { DestinationService } from './destination.service';
+import { DestinationService } from '../src/destination/destination.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { DestinationEntity } from './destination.entity';
-import { PostgresConfigService } from '../config/postgres.config.service';
+import { DestinationEntity } from '../src/destination/destination.entity';
+import { PostgresConfigService } from '../src/config/postgres.config.service';
 import { ConfigModule } from '@nestjs/config';
-import { DestinationController } from './destination.controller';
+import { DestinationController } from '../src/destination/destination.controller';
 
 describe('DestinationService', () => {
   let service: DestinationService;
