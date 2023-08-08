@@ -26,7 +26,14 @@ export class DestinationController {
         return destinations
     }
 
-    @Get('/destinos')
+    @Get('/:id')
+    async getOneDestiny(@Param('id') id: string){
+        const destination = await this.destinationService.getOneDestination(id);
+
+        return destination
+    }
+
+    @Get('/destinations')
     async queryDestinations(
         @Query('nome') nome:string,
     ){
@@ -34,9 +41,11 @@ export class DestinationController {
 
         return destinations.map( (destination) => new ListDestinationDTO(
             destination.id,
-            destination.price,
-            destination.name,
-            destination.photo
+            destination.description,
+            destination.meta,
+            destination.photo_one,
+            destination.photo_two,
+            destination.name
         ))
     }
 

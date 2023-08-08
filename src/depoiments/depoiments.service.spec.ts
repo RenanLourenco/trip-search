@@ -1,8 +1,8 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { DepoimentsService } from '../src/depoiments/depoiments.service';
+import { DepoimentsService } from './depoiments.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { PostgresConfigService } from '../src/config/postgres.config.service';
-import { DepoimentEntity } from '../src/depoiments/depoiment.entity';
+import { PostgresConfigService } from '../config/postgres.config.service';
+import { DepoimentEntity } from './depoiment.entity';
 import { ConfigModule } from '@nestjs/config';
 
 describe('DepoimentsService', () => {

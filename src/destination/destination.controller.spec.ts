@@ -1,13 +1,12 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { DestinationController } from '../src/destination/destination.controller';
+import { DestinationController } from './destination.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { DestinationEntity } from '../src/destination/destination.entity';
-import { PostgresConfigService } from '../src/config/postgres.config.service';
+import { DestinationEntity } from './destination.entity';
+import { PostgresConfigService } from '../config/postgres.config.service';
 import { ConfigModule } from '@nestjs/config';
-import { DestinationService } from '../src/destination/destination.service';
-import { ListDestinationDTO } from '../src/destination/DTO/ListDestination.dto';
+import { DestinationService } from './destination.service';
+import { ListDestinationDTO } from './DTO/ListDestination.dto';
 import { NotFoundException } from '@nestjs/common';
-import { DepoimentEntity } from 'src/depoiments/depoiment.entity';
 
 describe('DestinationController', () => {
   let controller: DestinationController;
@@ -52,8 +51,10 @@ describe('DestinationController', () => {
     it('should return a new destination saved', async () => {
       const expected : DestinationEntity = {
         id:'30',
-        photo:'https://via.placeholder.com/150',
-        price:1000,
+        photo_one:'https://via.placeholder.com/150',
+        photo_two:'https://via.placeholder.com/150',
+        meta:'"Santos: Praias e história à beira-mar."',
+        description:'Santos, uma cidade litorânea no Brasil, é conhecida por suas praias deslumbrantes, rica história portuária e encantador ambiente costeiro.',
         name:'santos'
       }
 

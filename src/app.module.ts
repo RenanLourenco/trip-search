@@ -6,6 +6,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { PostgresConfigService } from './config/postgres.config.service';
 import { ConfigModule } from '@nestjs/config';
 import { DestinationModule } from './destination/destination.module';
+import { Gpt } from './gpt/gpt';
+import { Openai } from './openai/openai';
 
 
 @Module({
@@ -21,6 +23,6 @@ import { DestinationModule } from './destination/destination.module';
     DestinationModule
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, Gpt, Openai],
 })
 export class AppModule {}

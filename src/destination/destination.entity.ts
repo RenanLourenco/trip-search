@@ -6,12 +6,19 @@ export class DestinationEntity {
     id:string
     
     @Column()
-    photo:string
-    
-    @Column()
-    price: number
+    photo_one:string
 
     @Column()
+    photo_two:string
+    
+    @Column()
     name:string
+
+    @Column()
+    meta:string
+
+    @Column()
+    description:string
+
 
 }

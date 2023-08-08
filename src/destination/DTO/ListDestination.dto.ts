@@ -1,8 +1,10 @@
 export class ListDestinationDTO {
     constructor(
         readonly id: string,
-        readonly price: number,
+        readonly meta: string,
         readonly name: string,
-        readonly photo:string
+        readonly photo_one:string,
+        readonly photo_two:string,
+        readonly description?:string,
     ) {}
   }

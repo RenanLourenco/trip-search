@@ -20,6 +20,12 @@ export class DestinationService {
         return this.destinationEntity.save(destination)
     }
 
+    async getOneDestination(id:string){
+        const destination = await this.destinationEntity.findOneBy({id:id})
+
+        return destination
+    }
+
     async listDestinations(){
         const destinations = await this.destinationEntity.find();
 
